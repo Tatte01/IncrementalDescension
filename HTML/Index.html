@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- CSS -->
+            <link rel="stylesheet" href="/CSS/main.css">
+        <!-- Icon -->
+            <link rel="Icon" type="image/Icon" href="/image.png">
+        <!-- JS -->
+            <script src="/JavaScript/Game.js"></script>
+        <!-- Title -->
+            <title id="Title"></title>
+    </head>
+<body>
+
+    <div class = "MenuTop">
+        <h3>Material Collector V0.0.4 
+            <a class="website" href="https://malteeriksson.com">My website</a></h3>
+    </div>
+        <!-- Money -->
+        <div class="MoneyPanel">
+            <div>
+                <button id="TotalCash" class="MoneyButton" onclick="HandleMouseClick(event)"></button>
+            </div>
+            <span id="Persec" class="Parsec"></span>
+        </div>
+
+    <div class="container">
+        <!-- Div for matrial -->
+        <div class="Material">
+            
+            <div class="Clicks" style="background-color: white;">
+                <button class="Buttons-Material">Hands</button>
+                <p class="Level">Strength :</p><span id="Click-level" class="SpanLevel"></span>
+                <p class="Cost">Cost :</p><span id="Click-cost" class="SpanCost">0</span>
+                <button class="Buttons-Right" onclick="Trainhands()" >Train Hands</button>
+            </div>
+
+            <div class="Coal" style="background-color: black; color: white;">
+                <button class="Buttons-Material">Coal</button>
+                <p class="Level">Drills :</p><span id="Coal-level" class="SpanLevel">0</span>
+                <p class="Cost">Cost :</p><span id="Coal-cost" class="SpanCost">0</span>
+                <button class="Buttons-Right" onclick="BuyNewDrill('Coal')">Buy Drill</button>
+            </div>
+
+            <div class="Silver" style="background-color: silver;">
+                <button class="Buttons-Material">Silver</button>
+                    <p class="Level">Drills :</p><span id="Silver-level" class="SpanLevel">0</span>
+                    <p class="Cost">Cost :</p><span id="Silver-cost">0</span>
+                <span id="Silver-button"></span>
+            </div>
+
+            <div class="Gold" style="background-color: gold;">
+                <button class="Buttons-Material" onclick="mineResource('Gold')">Gold</button>
+                <p class="Level">Drills : </p><span id="Gold-level" class="SpanLevel">0</span>
+                <p class="Cost">Cost : </p><span id="Gold-cost">0</span>
+                <span id="Gold-button"></span>
+            </div>
+
+
+            <div class="Diamond" style="background-color:#cce2ed;">
+                <button class="Buttons-Material" onclick="mineResource('Diamond')">Diamond</button>
+                <p class="Level">Drills : </p><span id="Diamond-level" class="SpanLevel">0</span>
+                <p class="Cost">Cost : </p><span id="Diamond-cost">0</span>
+                <span id="Diamond-button"></span>
+            </div>
+            <div class="Uranium" style="background-color:#2cfa1f;">
+                <button class="Buttons-Material" onclick="mineResource('Uranium')">Uranium</button>
+                <p class="Level">Drills : </p><span id="Uranium-level" class="SpanLevel">0</span>
+                <p class="Cost">Cost : </p><span id="Uranium-cost">0</span>
+                <span id="Uranium-button"></span>
+
+            </div>
+        </div>
+<!-- <img src="/Acivment/Coal/Coal5.png" alt=""> -->
+        <div class="Achievements" >
+            <h3>Achievements</h3>
+            <span id="Achievements-Amount" >0</span>
+                        <!-- Add these containers to your HTML -->
+            <div id="ClickerAchievements" class="achievement-container"></div>
+
+            <div id="CoalAchievements" class="achievement-container"></div>
+
+            <div id="SilverAchievements" class="achievement-container"></div>
+
+            <div id="GoldAchievements" class="achievement-container"></div>
+
+            <div id="DiamondAchievements" class="achievement-container"></div>
+
+            <div id="UraniumAchievements" class="achievement-container"></div>
+            <!-- Shows up here -->
+        </div>
+
+        <div class="Material"> 
+            <h1>Upgrades Coming soon...</h1>
+            <h1> Prestidge Coming soon...</h1>
+            <div>
+                
+            </div> 
+        </div>
+
+    </div>
+
+
+        <div class = "MenuDown">
+        <h3>Material Collector V0.0.4
+            <a class="website" href="https://malteeriksson.com">My website</a>
+            <div>
+                <button class="reset" onclick="saveRest()">Reset</button>
+            </div>
+        </div>
+
+
+        
+            <h1 class="Background-Text">Tatte01 <br> JavaScript Game</h1>
+            <img src="/LoadScreen.png" alt="Backround" class="Background-Picture">
+            <a href="https://github.com/Tatte01"><img src="/image.png" alt="Logo" class="backgroundLogo"></a>
+        </body>
+</html>
