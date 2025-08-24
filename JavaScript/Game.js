@@ -81,7 +81,7 @@ const GameSave = {
     }, 
     Money: {
         Amount: {
-            "Total": 0,
+            "Total": 10000000,
             "Time" : 0
         }
     },
@@ -173,7 +173,7 @@ const ResetSave = {
     }, 
     Money: {
         Amount: {
-            "Total": 0,
+            "Total": 10000000,
             "Time" : 0
         }
     },
@@ -255,31 +255,21 @@ function nFormatter(num, digits = 1) {
     return item ? (num / item.value).toFixed(digits).replace(regexp, "").concat(item.symbol) : "0";
 }
 
-function formatAmount(Amount) {
-    return Amount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-}
 // Updates the Displays of HTML. This is what you put in span to make it show up.
 function updateResourceDisplay() {
     // Update all resource levels and costs
     const resources = ['Click','Coal', 'Silver', 'Gold', 'Diamond', 'Uranium'];
     resources.forEach(resource => {
-        document.getElementById(`${resource}-level`).textContent = `${formatAmount(GameSave.Resources[resource].Level)}`;
+        document.getElementById(`${resource}-level`).textContent = `${nFormatter(GameSave.Resources[resource].Level)}`;
         document.getElementById(`${resource}-cost`).textContent = `${(nFormatter(GameSave.Resources[resource].Cost, 1))}`;
     });
 
     // Update achievement count
     document.getElementById("Achievements-Amount").textContent = `${GameSave.Achievements.Amount.Amount} / 30`;
-    // Update money with comma formatting
-    // 10.000.000 ten milsion
-    const Money = GameSave.Money.Amount.Total.toFixed(0); 
-    if(Money < 1000000) {    
-        document.getElementById("TotalCash").textContent = `${formatAmount(GameSave.Money.Amount.Total)} Cash`;
-        document.getElementById("Title").textContent = `Cash: ${formatAmount(GameSave.Money.Amount.Total)}`
-    } else {
-        document.getElementById("TotalCash").textContent = `${(formatAmount(GameSave.Money.Amount.Total) / 1000000).toFixed(1)}M Cash`;
-        document.getElementById("Title").textContent = `Cash: ${(formatAmount(GameSave.Money.Amount.Total)/ 1000000).toFixed(1)}M`
-    }
+
+    document.getElementById("TotalCash").textContent = `${(nFormatter(GameSave.Money.Amount.Total))}Cash`;
+    document.getElementById("Title").textContent = `Cash: ${(nFormatter(GameSave.Money.Amount.Total))}`
 
 }
 
@@ -440,7 +430,7 @@ function Moneypersec() {
     SumOfPer = (Coal.Level ) + (Silver.Level * 10) + (Gold.Level * 100) + (Diamond.Level * 1000) + (Uranium.Level * 10000)
     const Money = document.getElementById("Persec");
     Money.innerHTML = ` 
-        ${formatAmount(SumOfPer)} / Sec
+        ${nFormatter(SumOfPer)} / Sec
     
     `;
 }
