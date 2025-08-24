@@ -316,11 +316,11 @@ resources.forEach(resource => {
 
     // Define achievement milestones and their corresponding images
     const milestones = [
-            { threshold: 100, image: `/Acivment/${resource}/${resource}100.png` },
-            { threshold: 50, image: `/Acivment/${resource}/${resource}50.png` },
-            { threshold: 25, image: `/Acivment/${resource}/${resource}25.png` },
-            { threshold: 10, image: `/Acivment/${resource}/${resource}10.png` },
-            { threshold: 5, image: `/Acivment/${resource}/${resource}5.png` }
+            { threshold: 100, image: `Acivment/${resource}/${resource}100.png` },
+            { threshold: 50, image: `Acivment/${resource}/${resource}50.png` },
+            { threshold: 25, image: `Acivment/${resource}/${resource}25.png` },
+            { threshold: 10, image: `Acivment/${resource}/${resource}10.png` },
+            { threshold: 5, image: `Acivment/${resource}/${resource}5.png` }
         ];
 
     
@@ -578,11 +578,11 @@ function UpdateClickerAH() {
     let achievementHTML ='';
 
     const milestones = [
-            { threshold: 1000000, image: `/Acivment/Clicker/Clicker1M.png`, key: "1M"},
-            { threshold: 100000, image: `/Acivment/Clicker/Clicker100K.png`, key: "100K"},
-            { threshold: 10000, image: `/Acivment/Clicker/Clicker10K.png`, key: "10K" },
-            { threshold: 1000, image: `/Acivment/Clicker/Clicker1K.png`, key: "1K" },
-            { threshold: 1, image: `/Acivment/Clicker/Clicker1.png`, key: "1" }
+            { threshold: 1000000, image: `Acivment/Clicker/Clicker1M.png`, key: "1M"},
+            { threshold: 100000, image: `Acivment/Clicker/Clicker100K.png`, key: "100K"},
+            { threshold: 10000, image: `Acivment/Clicker/Clicker10K.png`, key: "10K" },
+            { threshold: 1000, image: `Acivment/Clicker/Clicker1K.png`, key: "1K" },
+            { threshold: 1, image: `Acivment/Clicker/Clicker1.png`, key: "1" }
         ];
 
     // Check each milestone and add unlocked achievements
