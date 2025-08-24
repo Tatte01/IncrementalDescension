@@ -658,7 +658,7 @@ function LoadingScreen() {
         <h1 class="loading-h1"> Tatte01 <br>
         Javascript <br>
         Game Loading...</h1>
-        <img src="/image.png" alt="Logo" class="Lodingicon">
+        <img src="icon.png" alt="Logo" class="Lodingicon">
     `;
     
     document.body.appendChild(LoadScreen);
