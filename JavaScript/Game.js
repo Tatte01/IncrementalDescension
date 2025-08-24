@@ -277,8 +277,8 @@ function updateResourceDisplay() {
         document.getElementById("TotalCash").textContent = `${formatAmount(GameSave.Money.Amount.Total)} Cash`;
         document.getElementById("Title").textContent = `Cash: ${formatAmount(GameSave.Money.Amount.Total)}`
     } else {
-        document.getElementById("TotalCash").textContent = `${(formattedNumber / 1000000).toFixed(1)}M Cash`;
-        document.getElementById("Title").textContent = `Cash: ${(formattedNumber/ 1000000).toFixed(1)}M`
+        document.getElementById("TotalCash").textContent = `${(formatAmount(GameSave.Money.Amount.Total) / 1000000).toFixed(1)}M Cash`;
+        document.getElementById("Title").textContent = `Cash: ${(formatAmount(GameSave.Money.Amount.Total)/ 1000000).toFixed(1)}M`
     }
 
 }
