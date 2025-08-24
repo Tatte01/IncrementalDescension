@@ -649,7 +649,7 @@ function UpdateEverythingUI() {
 function LoadingScreen() {
     const LoadScreen = document.createElement('div');
     LoadScreen.className = "loading-screen";
-    LoadScreen.style.backgroundImage = "url('/LoadScreen.png')";
+    LoadScreen.style.backgroundImage = "url('LoadScreen.png')";
     LoadScreen.style.backgroundSize = 'cover';
     LoadScreen.style.backgroundPosition = 'center';
     
