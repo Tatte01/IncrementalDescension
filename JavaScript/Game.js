@@ -81,7 +81,7 @@ const GameSave = {
     }, 
     Money: {
         Amount: {
-            "Total": 10000000,
+            "Total": 0,
             "Time" : 0
         }
     },
@@ -173,7 +173,7 @@ const ResetSave = {
     }, 
     Money: {
         Amount: {
-            "Total": 10000000,
+            "Total": 0,
             "Time" : 0
         }
     },
